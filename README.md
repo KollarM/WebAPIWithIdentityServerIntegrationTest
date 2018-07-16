@@ -1,5 +1,5 @@
 # WebAPIWithIdentityServerIntegrationTest
-This contains example solution for.NET Core 2.1 with IdentityServer Authentication and IntegrationTest
+This contains example solution for.NET Core 2.1 with IdentityServer Authentication and IntegrationTest (using xUnit)
 
 # The problem
 For WebAPI which is using authentication against STS (Security Token Service, like IdentityServer) we need our IntegrationTests to send AuthenticationToken in request header. Problem is to create this token and not override authentication mechanism in Startup of WebAPI or hack it too much.
