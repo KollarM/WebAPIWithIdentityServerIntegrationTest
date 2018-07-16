@@ -40,7 +40,6 @@ namespace IntegrationTests
             }
         }
 
-
         public async Task<string> GetAccessTokenForUser(string userName, string password, string clientId = "client", string clientSecret = "secret")
         {
             var client = new TokenClient(TokenEndpoint, clientId, clientSecret);
@@ -65,15 +64,6 @@ namespace IntegrationTests
                 .Build();
             Task.Factory.StartNew(() => _webHost.Run());
             //_webHost.Run();
-        }
-
-        private IEnumerable<IdentityResource> GetIdentityResources()
-        {
-            return new List<IdentityResource>
-            {
-                new IdentityResources.OpenId(),
-                new IdentityResources.Profile(),
-            };
         }
 
         public static List<ApiResource> GetApiResources()
